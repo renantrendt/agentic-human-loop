@@ -1,0 +1,118 @@
+{
+  "_comment_athena_first": "RECOMMENDED: Provide athena_integration.website_id and pipeline auto-fills brand info from Athena!",
+  "athena_integration": {
+    "enabled": false,
+    "website_id": "",
+    "api_url": "http://localhost:3000/api/webhooks",
+    "target_prompt": ""
+  },
+  "_comment_athena_sync": "Set enabled=true for full Athena integration: auto-fills brand, fetches response data, syncs content. NO CSV NEEDED!",
+  "_comment_target_prompt": "Specify target keyword OR leave empty to see zero-mention prompts. Pipeline fetches responses from Athena API.",
+  "_comment_brand": "If Athena enabled: name, url, keywords auto-filled. Otherwise provide manually:",
+  "brand": {},
+  "_example_manual_brand": {
+    "name": "Your Company Name",
+    "url": "https://www.yourcompany.com",
+    "tagline": "Your company tagline",
+    "industry": "Your Industry",
+    "keywords": ["yourcompany", "your company"]
+  },
+  "_comment_product_links": "OPTIONAL: Only add if you don't have a sitemap file. Homepage is auto-included. Example format:",
+  "_example_product_links": {
+    "default_product_links": [
+      {
+        "url": "https://www.yourcompany.com/contact",
+        "title": "Contact Us",
+        "type": "product",
+        "keywords": ["contact", "demo"]
+      }
+    ]
+  },
+  "competitor_analysis": {
+    "target_domain": "AUTO",
+    "domain_keywords": "AUTO"
+  },
+  "_comment_competitor_analysis": "Set to AUTO for dataset-based detection, or manually specify your industry and competitor list",
+  "_example_manual_competitor_analysis": {
+    "target_domain": "your_industry",
+    "domain_keywords": {
+      "your_industry": ["competitor1", "competitor2", "competitor3"]
+    }
+  },
+  "publishing": {
+    "author_name": "Your Name",
+    "google_sheets": {
+      "spreadsheet_id": "YOUR_GOOGLE_SHEETS_ID_HERE",
+      "sheet_name": "Sheet1"
+    },
+    "blog_path": "/blog"
+  },
+  "_comment_publishing": "author_name, spreadsheet_id, sheet_name are required. blog_path defaults to /blog. full_domain uses brand.url if not specified.",
+  "_comment_publishing": "blog_path: where articles publish. full_domain: complete URL (or uses brand.url if not specified)",
+  "content": {
+    "word_count_targets": {
+      "hub": {
+        "min": 3000,
+        "ideal": 4000,
+        "max": 6000,
+        "description": "Comprehensive pillar content"
+      },
+      "spoke": {
+        "min": 1500,
+        "ideal": 2000,
+        "max": 2500,
+        "description": "Focused deep-dive content"
+      }
+    },
+    "default_category": "AUTO",
+    "default_tags": "AUTO"
+  },
+  "_comment_content": "Category and tags auto-generated from top bigrams/trigrams in dataset. Or specify manually.",
+  "_example_manual_content": {
+    "default_category": "Your Content Category",
+    "default_tags": ["Tag1", "Tag2", "Tag3", "Tag4"]
+  },
+  "seo": {
+    "description_length": {
+      "min": 150,
+      "max": 160
+    }
+  },
+  "perplexity": {
+    "enabled": false,
+    "api_key": "",
+    "model": "sonar",
+    "model_pro": "sonar-pro",
+    "search_recency_filter": "year",
+    "max_sources_per_query": 5,
+    "timeout_seconds": 30
+  },
+  "_comment_perplexity": "Enable Perplexity Sonar for real citation discovery. Get API key from https://www.perplexity.ai/settings/api",
+  "citations": {
+    "require_verification": true,
+    "min_sources_per_article": 5,
+    "max_source_age_years": 2,
+    "allowed_domains": [
+      "gartner.com",
+      "forrester.com",
+      "mckinsey.com",
+      "hbr.org",
+      "harvard.edu",
+      "mit.edu",
+      "forbes.com",
+      "techcrunch.com"
+    ],
+    "blocked_domains": [
+      "wikipedia.org",
+      "reddit.com",
+      "quora.com"
+    ]
+  },
+  "_comment_citations": "Citation verification settings. allowed_domains are prioritized, blocked_domains are filtered out.",
+  "_comment_content_gap_analysis": "AUTO-FILLED from Step 3 AI term detection! Pipeline saves detected technical_terms here. Leave empty for auto-detection, or manually specify if needed.",
+  "_example_manual_content_gap_analysis": {
+    "specific_topic_keywords": ["custom_term1", "custom_term2", "custom_term3"]
+  },
+  "_note": "If you manually set specific_topic_keywords, auto-detection will be skipped and your manual list will be used instead."
+}
+

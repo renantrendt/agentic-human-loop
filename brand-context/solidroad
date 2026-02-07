@@ -1,0 +1,210 @@
+ Solidroad intended audience: CX leaders
+
+Section 1: Company Foundation & Context
+
+1. Tell me about Solidroad in your own words - what do you do and for whom?
+
+Solidroad is an AI-first quality assurance and training platform for customer experience teams. We score 100% of customer interactions and provide training simulations to enhance human agents, as well as prompt recommendations to improve AI agents.
+
+Core Products & Services:
+
+- AI-powered QA and training platform that reviews 100% of customer interactions.
+- Personalized training simulations for human agents.
+- Performance evaluation in live customer channels.
+
+Key Technologies or Innovations
+
+- Aggregation layer integrates with live communication channels and organizational data repositories (e.g., Intercom, Zendesk, Gong, Guru).
+- AI-powered quality scoring evaluates interactions on custom rubrics and generates actionable optimization recommendations.
+- The best-in-class simulation engine trains agents with lifelike scenarios that mirror how real customers look, act, and speak.
+
+Typical Use Cases and Applications
+
+- Onboarding and training new agent hires with realistic role‑play simulations, cutting ramp time by up to 50%.
+- Automated QA reviews 100% of customer interactions, replacing manual review of only a fraction of conversations.
+- Continuous performance improvement through tailored feedback loops.
+- AI agent refinement based on real conversational data.
+
+
+2. What was the founding story? What problem were you trying to solve?
+
+Solidroad was founded by two ex-Intercom teammates and the mission is to improve the quality bar of every customer interaction. The company was co-founded by Mark Hughes (CEO) and Patrick Finlay (CTO). The pair met at Intercom where Mark worked in sales and Patrick was a product engineer. The problem they are looking to solve is how to manage quality across all your interactions when you have so many different channels, human agents, outsourced BPO vendors, and now AI deflection agent vendors taking customer conversations. 
+
+3. What makes your approach different from existing solutions in the market?
+
+Existing solutions were built with manual processes in mind. They were workflow tools for manual classroom-based training and manual QA audits. These solutions have bolted on AI, whereas Solidroad has built AI natively. Solidroad uses AI to review 100% of conversations in both simulated and live environments across every channel to give you a full understanding of your business and how you are interacting with your customers. Existing solutions only review a small portion of conversations. Those who claim they do full coverage don’t close the feedback loop by optimising and improving conversations going forward. 
+
+
+4. How would you describe your company in one sentence to someone who's never heard of you?
+
+When you speak to a customer support agent, and you hear them say, “This call may be recorded for quality and training purposes” - we fix this. 
+
+
+5. What's your current stage (team size, funding, market presence)?
+
+We are at the seed stage. We have 12 teammates based between San Francisco and Dublin. We raised $6.5m seed round from First Round Capital and Y-Combinator. 
+
+Section 2: Unique Insights & Contrarian Viewpoints
+
+Pro Tip: These questions often yield the most shareable, viral content. Prioritize these if time is limited.
+
+1. What do you know about the customer support industry that everyone else is underestimating or overlooking?
+
+The future of customer support is hybrid. It is a combination of humans and AI. AI will take the Tier 1 and some Tier 2 conversations. Tier 3 will always be taken by humans. You need a platform to optimize for both. Everyone is running to automate as much as possible, but the main thing to focus on is delivering a great experience to your customers. End customers do not care if a conversation is handled by an in-house agent, an outsourced BPO, or an AI bot. They just want their issue resolved in a timely manner and to feel heard by the brand. 
+
+
+2. What's a common belief in your industry that you think is completely wrong?
+
+The market for AI agents is showing early signs of commoditization. Companies are competing on cost and winning deals through forward-deployed engineers. We believe over time companies will swap in AI agents like they do BPOs and leverage them against each other to bring the cost down. Larger enterprises will build their own AI agents using LLMs to have more control.
+3. What surprised you most after launching? What assumption did you have that turned out to be false?
+4. If you could go back 2 years, what would you tell yourself about this market?
+5. What's a trend everyone is talking about that you think is overrated? Underrated?
+6. What's the biggest misconception prospects have before they talk to you?
+
+Section 4: Customer Deep-Dive
+
+Pro Tip: Get permission to use customer names and quotes. Real names and companies add massive credibility.
+
+1. Walk me through a specific customer success story - start to finish.
+Crypto.com’s support team struggled with slow issue resolution times and declining CSAT scores. Agents lacked a structured way to practice real-world customer scenarios before handling live interactions. By introducing scalable, AI-driven simulations, they reduced Average Handling Time (AHT) by 18%, improved CSAT scores, and created a more efficient, high-impact training program.
+2. What was the customer's situation before finding you? What pain were they experiencing?
+Crypto.com’s new support agents faced significant hurdles in delivering high-quality service:
+Longer handling times – Agents took too long to resolve customer issues.
+Lower CSAT scores – Customers were dissatisfied with response efficiency.
+Poor issue identification – Slower diagnoses led to delayed resolutions.
+Ineffective communication – Agents struggled to explain complex topics clearly.
+3. What made them choose you over alternatives (including doing nothing)?
+They were doing nothing. Before making improvements, Crypto.com relied on:
+Manual chat role-plays – Trainers impersonated customers in one-on-one exercises, which didn’t scale.
+Limited real-world simulations – Agents lacked exposure to diverse support scenarios before going live.
+They needed a more structured, scalable approach:
+AI-powered simulations – Allowing agents to practice real-world customer issues.
+Scalable knowledge checks – Reinforcing critical skills with ongoing training.
+Structured feedback loops – Providing clear performance insights to accelerate learning.
+5. What specific results did they achieve? Can you share numbers?
+Since implementing structured training simulations, Crypto.com has seen:
+18% reduction in Average Handling Time (AHT) – Faster resolutions and improved efficiency.
+3% increase in CSAT scores – Customers received better support from well-prepared agents.
+Scalable, structured training – Allowing Crypto.com to onboard and upskill agents more effectively.
+6. What did the customer say in their own words about the experience?
+"This has transformed how we train our support team—more efficient, effective, and scalable."
+"Simulations allowed agents to sharpen their skills before speaking with real customers, leading to faster resolutions and better outcomes."
+
+Section 5: Framework & Methodology
+
+Pro Tip:  Frameworks with catchy names (like "The CIRCLES Method" or "Golden Circle") become industry standards and generate citations.
+
+1. Have you developed a specific process, framework, or methodology for [solving X problem]?
+IQS (Integrated Quality Score) - One standardized, explainable score applied to both human and AI interactions. IQS blends rubric-based judgment (tone, empathy, accuracy, resolution, compliance) across both human agents and AI agents. 
+2. Can you walk me through your approach step-by-step?
+Surface 100% of interactions (human + AI), normalize transcripts/metadata, and auto-tag intents.
+Calibrate & Combine: Define the quality rubric, weight criteria by risk, and fuse model scores + human reviews into IQS with confidence intervals.
+Outcome-Link: Correlate IQS with KPIs (AFRT, CSAT, churn, refund, recontact, etc) to set thresholds that actually matter.
+Remediate upstream: Train agents on skill gaps, retune AI for drift, surface learnings to policy and product where the journey is broken 
+Evolve continuously: weekly calibrations, drift detection, re-weighting, exception queues, and executive scorecards.
+3. What are the key stages or principles in your methodology?
+One standard, all channels: Humans and AI graded by the same rubric.
+Judgment over keywords: Criteria target intent, empathy, clarity, and correctness, not just phrase matching.
+Explainability by design: Every IQS point is traceable to evidence (turns, snippets, rules).
+Continuous calibration: Humans teach AI; AI exposes human blind spots. Both improve.
+4. How does your framework differ from traditional approaches?
+Orgs are still working out how to blend human and AI scoring, and it’s pretty manual and custom to each team. This framework gives companies a good starting/jumping off point. 
+5. Is there a memorable name or acronym for this process?
+SCORE
+6. What are the common mistakes people make when trying to solve this problem?
+Buying tech before truth: Stacking tools without a shared definition of good.
+Sampling bias: Making strategy from 2% of interactions and calling it voice of customer.
+Policing vs improving: Using QA to catch errors, not to teach judgment or fix upstream causes.
+KPI myopia: Optimizing AHT while driving recontacts and silent churn.
+Automating bad processes: Speeding up the wrong journey makes the wrong journey cheaper, not better.
+No governance: Rubrics drift, AI drifts, policies drift. Without calibration, quality decays.
+Ignoring agent experience: Burned-out agents can’t deliver brand-grade judgment; EX is a leading indicator of CX.
+One-and-done “listening tours”: Insights that don’t translate into product/policy changes are content, not operations.
+
+
+Section 6: Industry Predictions & Future Vision
+
+1. Where do you see [industry/category] in 2-3 years?
+In the next 2-3 years, CX will move from a function to a source of truth. AI agent companies will seek to become CRMs, as companies realize that support conversations are the cleanest mirror of the business. Customers surface product gaps, process inefficiencies, and brand sentiment before any other dataset can. Leaders over the next 2-3 years won’t just run contact centers, but feedback engines that power decisions across the business. AI will open the doors to operationalized support data - meaning that CX Ops will live next to Strategy in org charts as the strategic layer of the company. 
+2. What's about to change in your industry that most people aren't prepared for?
+There’s a common belief that AI is going to replace customer support agents by 2030. While yes, some workflows will shift primarily to AI, the big change that will come is the exposing of every inefficiency, every inconsistency, and every assumption happening in CX operations. For decades, support teams could hide behind metrics like AHT and CSAT. Those metrics painted a smoothed-over picture of broken customer journeys. But with the introduction of AI that reveals the truth of each customer journey at scale, there’s nowhere left to hide. We’re entering a world where leadership teams can quantify empathy, clarity, and accuracy – and the uncomfortable truth is that most CX teams aren’t ready to be held to that level of transparency. When the lights turn on, the cracks in process, training, and product will show through. 
+3. What should companies be doing now to prepare for what's coming?
+Broad strokes - companies should be building CX systems that continuously learn and evolve to constantly improve customer experiences. The next gen of CX orgs will look less like call centers and more like ops-heavy living learning systems. The orgs that come out on top will start (today!!) implementing tools that give them full visibility into their customer interactions at scale, begin generating custom trainings for their support agents based on their individual skill gaps, and stand up VoC programs that turn traditional CSAT reporting into living, breathing feedback loops for product, policy, marketing, and operations teams. 
+4. What innovation or shift are you most excited about?
+We’re passionate about human and AI agents working together to drive truly great customer experiences, so the shift we’re most excited about is that merging of human judgement with the precision of AI. AI can now listen at an enterprise scale, but it still needs human context to understand what good really is - especially when *good* differs so greatly from org to org. The shift isn’t AI taking over CX - it’s AI learning from humans, and humans improving through AI feedback. 
+5. What's the next big problem that needs solving in this space?
+The insight to action gap. Most CX leaders don’t truly know what’s broken (as they can only get directional feedback from parsing through 1-2% of customer interactions), and any insights their analysts teams do find die in slide decks, misaligned OKRs, or the six-week delay between identifying a pattern in customer interactions and changing something upstream. The solution is making the insight to action loop instant. This is done when what customers say connects to what QA detects, which determines what trainings change, what product fixes, and what the company learns. 
+
+Section 7: Tactical Advice & Actionable Insights
+
+1. If someone is facing challenges, what's the first thing they should do?
+If a CX leader at a growing company is facing challenges scaling their customer support team efficiently, they should look to AI solutions to help solve the problem. This challenge is critically important because fast-growing companies know they need to deliver exceptional customer service experiences to maintain a loyal customer base. The solution is two-sided – CX leaders need to understand their customer problems extremely well, and they need to ensure their staff is prepared to handle those problems extremely well. To understand customer problems well, leaders should look for a solution that allows them to get an immediate picture of the customer interactions happening across every channel (phone, video, live chat, email, etc.). Without AI, this is an incredibly manual process. With AI, this can be done in seconds - giving leaders a perfect view of the pulse of their customers and the problems they’re facing in any given moment. To ensure agents are well prepared to face those problems, leaders should, again, turn to AI. Traditional training methods take a long time to turn around – trainers need to surface training opportunities that are relevant for the broadest group of agents, then create the trainings for the group, then run the trainings. With AI, trainings can be surfaced, created, and assigned in minutes – and are personalized to each agent, rather than made to serve a wide range of agents. 
+2. What's a quick win companies can implement immediately?
+Start running third-party QA on your BPOs. Doing so will give you a pulse on how certain BPOs compare to others, and where their gaps are. BPOs are a tremendous investment for brands, so ensuring high ROI is imperative. 
+3. What tools or resources do you recommend people start with?
+Before buying another “customer 360” tool, start by mapping the truth gaps in your current system. Most teams don’t need more dashboards - they need a single, trusted lens on what’s actually happening in customer conversations. That means pulling data from where truth already lives: your CRM, ticketing platform, QA forms, chat logs, and survey comments. The goal is to make qualitative data quantifiable and actionable.
+Tools
+Conversation intelligence platforms (Gong, Observe.AI, Solidroad) to surface patterns across 100% of interactions — not the 2% humans can manually review.
+Quality frameworks and calibration tools to align what “good” means internally before scaling it.
+Shared CX insights dashboards that sit next to your business metrics, so experience data becomes part of daily decision-making — not a quarterly slide.
+Simple automation + enablement tools (Guru, Notion, or your CRM’s native modules) to close the loop between what’s learned in QA and what’s taught in training.
+Resources:
+Listen to 50 real customer conversations before you build a strategy deck.
+Run a “Voice of the Agent” session. Ask your team what frustrates them most about helping customers. It will tell you more than any NPS survey.
+Read works that reframe service as a strategic function: The Effortless Experience, Measure What Matters, and Good Strategy/Bad Strategy are good starting points.
+4. What's the biggest mistake you see companies making, and how can they fix it?
+Treating customer experience as a department, not an organism. Most companies build CX teams that optimize parts of the journey, like QA scores, handle time, CSAT, CS cost, etc. without understanding that experience is a living system. Every decision made in marketing, product, and operations eventually lands in support’s lap. The symptom (long queues, low CSAT, high churn) isn’t the disease but the lagging indicator of organizational misalignment. CX needs to be reframed as a system of truth, and leaders have an imperative to be connected throughout the organization. It’s reciprocal, too – if CX leaders are plugged in throughout the org, they can both field and have input on decisions being made throughout other orgs that will impact support, as well as pass along real-time data on what’s breaking across the business (bugs, messaging gaps, unmet expectations). The best CX leaders bring that truth to the exec table and make CX the connective tissue between customer reality and company priorities.
+5. What's your 'secret weapon' or underutilized tactic that works really well?
+An underutilized tactic that works really well (but is objectively not easy to solve without proper tooling) is implementing KPIs around qual, and not quant customer metrics. Every CX org tracks quant metrics (tickets handled, AFRT, AHT, CSAT, NPS, % resolved, etc.) but it’s fairly difficult to track the quality of conversations at scale - especially because most organizations can only QA 1-3% of interactions. But when CX orgs systematically measure how well every human or AI agent aligns with brand standards (tone, empathy, accuracy, etc.), they can unlock compounding improvement that makes a meaningful impact on customers. That’s why our “secret weapon” is operationalizing judgement at scale. Quality isn’t subjective. It can be trained, quantified, and continuously improved. When qual data becomes just as visible as AHT or AFRT, it can change how teams hire, coach, and ultimately shape teams. 
+6. What should someone do in their first 30/60/90 days of tackling this problem?
+30 days: diagnose reality. Don’t start with a playbook. Listen to real customer conversations. Work with other leaders across the company to create a mutual charter on how CX will interact with other teams to both ingest information around business decisions and share information on customer data. 
+60 days: bring on the right tools. Look for AI tools that allow you to fill blind spots in customer experience and take a more proactive approach to support and overall business strategy. AI QA is essential. AI training is a no-brainer. 
+90 days: operationalize. Set up ongoing calibrations to continually refine your AI agents. Elevate your leaders to share new learnings from the customer dataset publicly. 
+
+Section 8: Competitive Landscape & Market Position
+
+1. How do you think about your competitive landscape?
+Three main buckets - training competitors, QA competitors, and zero current solution 
+2. Who are companies often comparing you to, and how do you differentiate?
+SecondNature, Zenarate, MaestroQA, Observe.ai, Scorebuddy
+3. What do you do that competitors can't easily copy?
+We’re built with and by AI. AI isn’t bolted on like with other competitors – it’s inherent to our company DNA. 
+We score 100% of customer conversations, support 80+ languages, and are built to support the entire agent lifecycle 
+4. What's your unfair advantage or moat?
+We’re more hands-on with our customers than any competitor, ship features with more velocity, and are at the cutting edge of CX AI advancements. 
+
+Pro Tip: Comparison content ("X vs Y") ranks extremely well and captures high-intent search traffic.
+
+Section 9: Founder/Expert Journey & Lessons Learned
+
+1. What's been your biggest learning as a [founder/expert] in this space?
+
+Customer Experience (CX) leaders face increasing pressure to uphold exceptional quality standards and maintain high CSAT scores, all while driving down operational costs. They constantly navigate the delicate balance between efficiency and quality. With the rapid advancement of AI, this challenge has only intensified — leaders are now expected to integrate AI solutions extensively across their operations without compromising the customer experience.
+
+2. Tell me about a major failure or setback and what you learned from it.
+
+My first startup, Gradguide, ultimately failed. We built a graduate recruitment platform that connected recent graduates with mentors to help them secure their first roles in the tech industry. I made early fundraising mistakes — raising $2 million on unfavorable terms that gave away 75% of the business. When market conditions tightened in 2021, our lead investor declined to provide additional support and pushed for a sale. Through that experience, I learned the importance of raising capital on fair terms and partnering with long-term investors who share your vision and are committed to supporting the business through both good and challenging times.
+
+3. What advice would you give to someone just starting out in [industry/role]?
+
+My advice to anyone starting a company is to find a co-founder you deeply trust — someone whose strengths complement your own. In my case, I’m not technical, so my co-founder leads on engineering while I focus on go-to-market. That balance has been invaluable. Building a startup is challenging, and having the right partner makes it possible to go further together than you ever could alone.
+
+4. What's something you believed at the start that you've completely changed your mind on?
+
+I used to believe the startup journey would get easier over time, that reaching certain milestones in revenue, team size, or funding would bring stability. In reality, I’ve learned the opposite is true. Each stage brings new and more complex challenges. If you’re still in your role every six months, it’s because you’ve effectively been promoted; the job keeps evolving, and so must you.
+
+5. What's the hardest part of [running this company/doing this work] that people don't see?
+
+The hardest part of my job is managing across multiple time zones. We have an incredible team in Dublin, Ireland, and another in San Francisco. The eight-hour difference means I often wake up to Slack messages at 5 a.m. and work until 9 p.m. most nights. It can be challenging to stay aligned across continents, and in an ideal world, we’d all be in the same room collaborating together.
+
+Section 10: Quotable Insights & Sound Bites
+
+1. If you had to summarize your philosophy in one sentence, what would it be?
+2. What's your hot take on CX?
+The next wave of CX innovation won’t come from AI replacing humans, but humans and AI continuously learning from each other. 
+3. Complete this sentence: "Most people think X, but actually..."
+Most people think measuring CX is about seeing what’s wrong, but actually it’s about learning how to get better. The best companies don’t fear low scores, they fear blind spots.
+4. What's the one thing you wish everyone knew about [topic]?
+About quality: It’s not a score. It’s a signal. Traditional QA treats quality like a grade on a test. In reality, quality is an organizational feedback loop. Done right, it tells you where training, product, and policy are failing customers and how to fix it.
+5. What would you put on a billboard to spread your message?
+Every conversation is feedback. You’re either listening or losing.

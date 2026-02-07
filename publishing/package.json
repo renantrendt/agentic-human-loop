@@ -1,0 +1,16 @@
+{
+  "name": "publishing",
+  "version": "1.0.0",
+  "description": "**Purpose:** Export generated articles to Framer (via Google Sheets) + Sync to Athena   **Last Updated:** November 22, 2025",
+  "type": "module",
+  "main": "publish_to_framer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "framer-api": "^0.1.3"
+  }
+}

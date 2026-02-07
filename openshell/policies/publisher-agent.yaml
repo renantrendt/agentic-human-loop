@@ -1,0 +1,41 @@
+# Publisher Agent — Framer CMS only. No Claude access.
+
+version: 1
+
+filesystem_policy:
+  include_workdir: true
+  read_only: [/usr, /lib, /proc, /dev/urandom, /app, /etc, /var/log]
+  read_write: [/sandbox, /tmp, /dev/null]
+landlock:
+  compatibility: best_effort
+process:
+  run_as_user: sandbox
+  run_as_group: sandbox
+
+network_policies:
+  framer:
+    name: framer-cms
+    endpoints:
+      - { host: framer.com, port: 443 }
+      - { host: api.framer.com, port: 443 }
+      - { host: events.framer.com, port: 443 }
+      - { host: "*.framer.com", port: 443 }
+    binaries:
+      - { path: /usr/bin/node }
+      - { path: /usr/bin/curl }
+
+  npm:
+    name: npm-registry
+    endpoints:
+      - { host: registry.npmjs.org, port: 443 }
+    binaries:
+      - { path: /usr/bin/node }
+
+  pypi:
+    name: python-packages
+    endpoints:
+      - { host: pypi.org, port: 443 }
+      - { host: files.pythonhosted.org, port: 443 }
+    binaries:
+      - { path: "/sandbox/.uv/python/**" }
+      - { path: /sandbox/.venv/bin/pip }

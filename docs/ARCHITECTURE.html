@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Autonomous Content Agent</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f8f7f4;--surface:#fff;--border:#e8e5df;--text:#1a1a1a;--dim:#8a8a8a;--muted:#666;--accent:#e8553d;--card:#f2f0ec}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',system-ui,sans-serif;padding:40px;max-width:1600px;margin:0 auto;-webkit-font-smoothing:antialiased;font-size:15px}
+
+h1{font-family:'DM Sans',system-ui,sans-serif;font-weight:600;font-size:42px;font-weight:400;letter-spacing:-1px;margin-bottom:8px;color:var(--text)}
+.sub{color:var(--dim);font-size:16px;font-weight:400;margin-bottom:80px}
+.sec{font-size:11px;text-transform:uppercase;letter-spacing:3px;color:var(--dim);margin:72px 0 28px;font-weight:500}
+
+/* Flow */
+.flow{display:flex;align-items:stretch;gap:0;width:100%}
+.fn{flex:1;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:22px 18px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.fn strong{display:block;font-family:'DM Sans',system-ui,sans-serif;font-weight:600;font-size:15px;font-weight:400;margin-bottom:6px;color:var(--text)}
+.fn span{color:var(--dim);font-size:12px;line-height:1.6}
+.fa{display:flex;align-items:center;color:#666;padding:0 8px;font-size:22px;flex-shrink:0}
+
+/* Cards */
+.card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:28px;margin-top:28px}
+.card h3{font-family:'DM Sans',system-ui,sans-serif;font-weight:600;font-size:20px;font-weight:400;margin-bottom:18px;color:var(--text)}
+.ls{display:flex;align-items:center;gap:0;flex-wrap:wrap}
+.li{font-size:12px;padding:7px 14px;background:var(--bg);border:1px solid var(--border);border-radius:8px;color:var(--muted)}
+.la{color:#666;font-size:16px;padding:0 6px}
+.note{font-size:12px;color:var(--dim);margin-top:16px;line-height:1.7}
+
+/* 3-col */
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.gc{background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:20px}
+.gc h4{font-family:'DM Sans',system-ui,sans-serif;font-weight:600;font-size:15px;font-weight:400;margin-bottom:8px;color:var(--text)}
+.gc p{font-size:12px;color:var(--dim);line-height:1.6}
+
+/* Sandbox */
+.brev{border:1px solid var(--border);border-radius:18px;padding:36px;position:relative;background:var(--surface)}
+.brev::before{content:'Brev Cloud';position:absolute;top:-10px;left:24px;background:var(--bg);padding:0 12px;font-size:11px;color:var(--dim);letter-spacing:2px;text-transform:uppercase;font-weight:500}
+.os{border:1px solid var(--border);border-radius:14px;padding:28px;position:relative;background:var(--card)}
+.os::before{content:'OpenShell';position:absolute;top:-10px;left:24px;background:var(--card);padding:0 12px;font-size:11px;color:var(--accent);letter-spacing:2px;text-transform:uppercase;font-weight:500}
+.pe{border:1px solid var(--accent);border-radius:10px;padding:16px;margin-bottom:16px;background:var(--bg)}
+.pe h4{font-family:'DM Sans',system-ui,sans-serif;font-weight:600;font-size:12px;margin-bottom:4px;color:var(--accent)}
+.pe p{font-size:11px;color:var(--dim);line-height:1.5}
+.sandbox-inner{border:1px dashed #999;border-radius:10px;padding:16px;position:relative}
+.sandbox-inner::before{content:'Isolated Containers';position:absolute;top:-10px;left:16px;background:var(--card);padding:0 8px;font-size:10px;color:var(--dim);letter-spacing:1.5px;text-transform:uppercase}
+.sg{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.sb{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px}
+.sb h4{font-family:'DM Sans',system-ui,sans-serif;font-weight:600;font-size:14px;font-weight:400;margin-bottom:5px;color:var(--text)}
+.sb p{font-size:11px;color:var(--dim);line-height:1.5;margin-bottom:8px}
+.tags{font-size:10px;line-height:2}
+.tags .a{color:var(--muted);margin-right:8px}.tags .a::before{content:'+ ';color:var(--accent)}
+.tags .d{color:#ccc;margin-right:8px}.tags .d::before{content:'- ';color:#ddd}
+
+/* Sequence */
+.seq{display:flex;align-items:center;gap:0;flex-wrap:wrap;margin:14px 0;justify-content:center;width:100%}
+.sq{font-size:12px;padding:9px 20px;border:1px solid var(--border);background:var(--surface);border-radius:8px;color:var(--muted);flex:1;text-align:center}
+.sq.h{color:var(--text);font-weight:500}
+.sa{color:#666;padding:0 6px;font-size:14px}
+
+/* Steps */
+.sr{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--border)}
+.sr:last-of-type{border-bottom:none}
+.snum{font-size:12px;font-weight:500;color:var(--accent);min-width:56px}
+.slbl{font-size:13px;color:var(--muted);flex:1}
+.ssb{font-size:11px;color:var(--dim)}
+
+/* Infra */
+.ig{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.ic{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;text-align:center}
+.ic strong{display:block;font-family:'DM Sans',system-ui,sans-serif;font-weight:600;font-size:14px;font-weight:400;margin-bottom:4px}
+.ic span{font-size:11px;color:var(--dim)}
+
+.footer{text-align:center;margin-top:80px;color:var(--dim);font-size:11px;letter-spacing:0.5px}
+</style>
+</head>
+<body>
+
+<h1>Autonomous Content Agent</h1>
+<div class="sub">OpenShell Claw on Brev / Gmail Pub/Sub / Claude Opus 4.6</div>
+
+<div class="sec">Pipeline</div>
+<div class="flow">
+  <div class="fn"><strong>Social Monitor</strong></div>
+  <div class="fa">&rarr;</div>
+  <div class="fn"><strong>Gap Detector</strong></div>
+  <div class="fa">&rarr;</div>
+  <div class="fn"><strong>Writer</strong></div>
+  <div class="fa">&rarr;</div>
+  <div class="fn"><strong>Email Digest</strong></div>
+  <div class="fa">&rarr;</div>
+  <div class="fn"><strong>Review</strong></div>
+  <div class="fa">&rarr;</div>
+  <div class="fn"><strong>Publish</strong></div>
+</div>
+
+<div class="sec">Sandboxes</div>
+<div class="brev">
+  <div class="sb" style="margin-bottom:16px;">
+    <h4>claw.py &mdash; Orchestrator</h4>
+    <p>Persistent event loop on the host. SSH-based sandbox execution. Monitors every 2h, feedback every 5min. Data passed between sandboxes via upload/download.</p>
+  </div>
+  <div class="os">
+    <div class="pe">
+      <h4>Policy Engine</h4>
+      <p>Out-of-process. Deny-by-default. YAML declarative. Per-binary enforcement. Hot-reloadable. Intercepts all sandbox traffic. Agent cannot override.</p>
+    </div>
+    <div class="sandbox-inner">
+      <div class="sg">
+        <div class="sb">
+          <h4>monitor</h4>
+          <p>Scrapes Reddit + YouTube. Processes untrusted content. No API keys. Deterministic.</p>
+          <div class="tags"><span class="a">reddit</span><span class="a">googleapis</span><span class="a">pypi</span><span class="d">anthropic</span><span class="d">framer</span><span class="d">resend</span></div>
+        </div>
+        <div class="sb">
+          <h4>analyst-agent</h4>
+          <p>Claude clusters signals, detects gaps vs sitemap. Loads rejection memory.</p>
+          <div class="tags"><span class="a">anthropic</span><span class="a">pypi</span><span class="d">reddit</span><span class="d">framer</span><span class="d">resend</span></div>
+        </div>
+        <div class="sb">
+          <h4>writer-agent</h4>
+          <p>Generates + revises articles. Steps 4, 5, 6, 7, 10, 11.</p>
+          <div class="tags"><span class="a">anthropic</span><span class="a">pypi</span><span class="d">reddit</span><span class="d">framer</span><span class="d">resend</span></div>
+        </div>
+        <div class="sb">
+          <h4>reviewer-agent</h4>
+          <p>Email digest + Gmail push + feedback processing.</p>
+          <div class="tags"><span class="a">resend</span><span class="a">gmail</span><span class="a">anthropic</span><span class="d">reddit</span><span class="d">framer</span></div>
+        </div>
+        <div class="sb">
+          <h4>publisher</h4>
+          <p>Framer CMS only. No Claude access. Deterministic.</p>
+          <div class="tags"><span class="a">framer</span><span class="a">npmjs</span><span class="d">anthropic</span><span class="d">reddit</span><span class="d">resend</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sec">Security</div>
+<div class="g3">
+  <div class="gc"><h4>Prompt Injection</h4><p>Monitor has no API keys. Injection from Reddit content is harmless.</p></div>
+  <div class="gc"><h4>Content Exfiltration</h4><p>Publisher has no Claude. Cannot send article content to an LLM endpoint.</p></div>
+  <div class="gc"><h4>Runaway Publishing</h4><p>Nothing auto-publishes. User must approve via email. Writer cannot reach Framer.</p></div>
+  <div class="gc"><h4>Credential Exposure</h4><p>GCP Secret Manager for prod. Env vars injected at runtime, never on disk.</p></div>
+  <div class="gc"><h4>Repeated Bad Content</h4><p>Rejection memory across sessions. Agent learns from past feedback.</p></div>
+  <div class="gc"><h4>Supply Chain</h4><p>PyPI access via policy. Package requests escalated to email for approval.</p></div>
+</div>
+
+<div class="sec">Data Sources</div>
+<div class="ig">
+  <div class="ic"><strong>Reddit RSS</strong><span>Social signals</span></div>
+  <div class="ic"><strong>YouTube API</strong><span>Comments + trends</span></div>
+  <div class="ic"><strong>Athena</strong><span>Brand context</span></div>
+  <div class="ic"><strong>Gmail API</strong><span>Feedback channel</span></div>
+</div>
+
+<div class="sec">Infrastructure</div>
+<div class="ig">
+  <div class="ic"><strong>Claude Opus 4.6</strong><span>All AI</span></div>
+  <div class="ic"><strong>OpenShell</strong><span>Sandbox isolation</span></div>
+  <div class="ic"><strong>Brev</strong><span>Cloud compute</span></div>
+  <div class="ic"><strong>Docker + K3s</strong><span>Containers</span></div>
+  <div class="ic"><strong>GCP Pub/Sub</strong><span>Real-time Gmail</span></div>
+  <div class="ic"><strong>GCP Secrets</strong><span>Credentials</span></div>
+  <div class="ic"><strong>Resend</strong><span>Email delivery</span></div>
+  <div class="ic"><strong>Framer</strong><span>CMS publishing</span></div>
+</div>
+
+<div class="sec">Execution Sequence</div>
+<div class="seq">
+  <div class="sq h">Monitor</div><div class="sa">&rarr;</div>
+  <div class="sq h">Analyst</div><div class="sa">&rarr;</div>
+  <div class="sq h">Writer</div><div class="sa">&rarr;</div>
+  <div class="sq h">Reviewer</div><div class="sa">&rarr;</div>
+  <div class="sq h">Email</div><div class="sa">&rarr;</div>
+  <div class="sq h">Reply</div><div class="sa">&rarr;</div>
+  <div class="sq h">AI</div><div class="sa">&rarr;</div>
+  <div class="sq h">Revise</div><div class="sa">&rarr;</div>
+  <div class="sq h">Email</div><div class="sa">&rarr;</div>
+  <div class="sq h">Approve</div><div class="sa">&rarr;</div>
+  <div class="sq h">Publish</div>
+</div>
+
+<div class="sec">In Action</div>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center;">
+    <img src="email-digest-preview.png" alt="Email Digest" style="max-width:100%;border-radius:8px;border:1px solid var(--border);">
+    <p style="margin-top:12px;font-size:12px;color:var(--dim);">Article digest with rich HTML, version history, quality scores</p>
+  </div>
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center;">
+    <div style="display:flex;flex-direction:column;gap:12px;">
+      <img src="email-reply.png" alt="Email Reply" style="max-width:100%;border-radius:8px;border:1px solid var(--border);">
+      <img src="email-rejected.png" alt="Rejected with version history" style="max-width:100%;border-radius:8px;border:1px solid var(--border);">
+      <img src="email-approval.png" alt="Content Live" style="max-width:100%;border-radius:8px;border:1px solid var(--border);">
+    </div>
+    <p style="margin-top:12px;font-size:12px;color:var(--dim);">Reply, rejection with version history, then content live confirmation</p>
+  </div>
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center;">
+    <img src="framer-cms.png" alt="Framer CMS" style="max-width:100%;border-radius:8px;border:1px solid var(--border);">
+    <img src="framer-live.png" alt="Live on website" style="max-width:100%;border-radius:8px;border:1px solid var(--border);margin-top:12px;">
+    <p style="margin-top:12px;font-size:12px;color:var(--dim);">Published to Framer CMS — live on website</p>
+  </div>
+</div>
+
+<div class="footer">Autonomous Content Agent</div>
+
+</body>
+</html>

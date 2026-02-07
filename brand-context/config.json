@@ -1,0 +1,96 @@
+{
+  "_comment_setup": "Athena-first config: Enable athena_integration and pipeline auto-fills everything from Athena API!",
+  "athena_integration": {
+    "enabled": true,
+    "website_id": "213c8e3d-7abe-4051-a555-b990ea7a1a4e",
+    "api_url": "https://athenahq-marketing-git-webhook-renan-athenahq.vercel.app/api/webhooks",
+    "vercel_share_token": "xPYysTzm4wgr4pKkMkaDLQB5exepxdKw",
+    "target_prompt": "conversation analytics platform"
+  },
+  "_comment_brand": "Leave empty if Athena enabled - will be auto-filled from /settings endpoint",
+  "brand": {},
+  "_comment_target_prompt": "Leave empty to see zero-mention prompts, or specify keyword (e.g., 'conversation analytics platform'). If enabled, pipeline fetches data from Athena API instead of CSV!",
+  "data_source": {
+    "csv_file": "responses_export_2025-11-23.csv",
+    "domain_name": "conversation analytics platform",
+    "min_responses_required": 100
+  },
+  "_comment_data_source": "CSV filename and domain name. Only used if Athena mode disabled. Change domain_name to match your target industry (e.g., 'marketing automation', 'customer support software', etc.).",
+  "_comment_content_analysis": "Step 3 now uses AI to auto-detect technical & industry terms from your data. No manual configuration needed! AI analyzes sample responses and extracts relevant vocabulary patterns automatically.",
+  "competitor_analysis": {
+    "target_domain": "AUTO",
+    "domain_keywords": "AUTO"
+  },
+  "publishing": {
+    "author_name": "Renan Serrano",
+    "google_sheets": {
+      "spreadsheet_id": "1P4TkNRHwj6wHPrU_hpgXUXIOBJdQdDjBjgVQ4WUGiu0",
+      "sheet_name": "Framer"
+    },
+    "framer": {
+      "project_url": "framer.com/projects/autonomous-content-agent--ExZ6SQQ4QpOoMwTXC0Yu",
+      "api_key_env": "FRAMER_API_KEY",
+      "collection_id": "X6jEoyuHK",
+      "publish_as_draft": false,
+      "_comment": "Set project_url and collection_id. API key comes from FRAMER_API_KEY env var. Nothing auto-publishes — user must approve first."
+    },
+    "blog_path": "/blog"
+  },
+  "_comment_full_domain": "Auto-filled from brand.url (which comes from Athena if enabled)",
+  "content": {
+    "language": "English",
+    "target_audience": "VP Customer Support, VP Operations, Sales Leaders",
+    "tone": "Professional, data-driven, practical",
+    "word_count_targets": {
+      "hub": {
+        "min": 3000,
+        "ideal": 4000,
+        "max": 6000
+      },
+      "spoke": {
+        "min": 1500,
+        "ideal": 2000,
+        "max": 2500
+      }
+    },
+    "default_category": "AUTO",
+    "default_tags": "AUTO"
+  },
+  "_comment_content": "Language, audience, and tone are auto-filled in article generation tasks.",
+  "seo": {
+    "description_length": {
+      "min": 150,
+      "max": 160
+    }
+  },
+  "social_monitor": {
+    "categories": [],
+    "_comment_categories": "Leave empty to auto-derive from athena target_prompt + content.target_audience. Or specify explicit search terms.",
+    "reddit": {
+      "enabled": true,
+      "max_posts_per_category": 25
+    },
+    "youtube": {
+      "enabled": true,
+      "api_key_env": "YOUTUBE_API_KEY",
+      "max_videos_per_category": 10,
+      "max_comments_per_video": 20,
+      "region_code": "US"
+    }
+  },
+  "autonomous": {
+    "model": "claude-opus-4-6",
+    "max_tokens": 16000,
+    "auto_publish": false,
+    "_comment_auto_publish": "NEVER auto-publish. All content requires user approval via email digest."
+  },
+  "notifications": {
+    "resend": {
+      "api_key_env": "RESEND_API_KEY",
+      "from_email": "renan@athenahq.ai",
+      "to_email": "renan@athenahq.ai",
+      "weekly_digest": true
+    }
+  }
+}
+
